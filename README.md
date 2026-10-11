@@ -159,33 +159,37 @@ error trace.
 
 The CKG is a directed multi-graph
 
-$$G = (V, E, \tau_V, \tau_E)$$
+```math
+G = (V, E, \tau_V, \tau_E)
+```
 
-with node types $\tau_V : V \to \{\text{File}, \text{Class}, \text{Function}, \text{External}\}$ and
+with node types $`\tau_V : V \to \{\text{File}, \text{Class}, \text{Function}, \text{External}\}`$ and
 edge types
-$\tau_E : E \to \{\text{DEFINES}, \text{CALLS}, \text{INHERITS\_FROM}, \text{IMPORTS}, \text{USES\_TYPE}\}$,
-where $E \subseteq V \times V \times \mathcal{R}$. It is a multi-graph because two nodes can be
+$`\tau_E : E \to \{\mathrm{DEFINES}, \mathrm{CALLS}, \mathrm{INHERITS\_FROM}, \mathrm{IMPORTS}, \mathrm{USES\_TYPE}\}`$,
+where $`E \subseteq V \times V \times \mathcal{R}`$. It is a multi-graph because two nodes can be
 related in more than one way (for example a function can both call and annotate with the same
 class).
 
 **Symbol resolution.** The parser only sees names (for example the call `self.decode(token)`
-yields the symbolic target `decode`). For a symbolic edge $e = (u, t, r)$ with simple name
-$\nu(t)$ (the last dotted segment) let the type-compatible candidate set be
+yields the symbolic target `decode`). For a symbolic edge $`e = (u, t, r)`$ with simple name
+$`\nu(t)`$ (the last dotted segment) let the type-compatible candidate set be
 
-$$C(e) = \{ v \in V : \tau_V(v) \in T_r,\ \text{name}(v) = \nu(t) \}$$
+```math
+C(e) = \{ v \in V : \tau_V(v) \in T_r,\ \text{name}(v) = \nu(t) \}
+```
 
-where $T_r = \{\text{Function}, \text{Class}\}$ for `CALLS` and $\{\text{Class}\}$ for
-`INHERITS_FROM` and `USES_TYPE`. Let $C_{\text{file}}(e)$ be the candidates defined in the same
-file as the source $u$. The edge is resolved to
+where $`T_r = \{\text{Function}, \text{Class}\}`$ for `CALLS` and $`\{\text{Class}\}`$ for
+`INHERITS_FROM` and `USES_TYPE`. Let $`C_{\text{file}}(e)`$ be the candidates defined in the same
+file as the source $`u`$. The edge is resolved to
 
-$$
+```math
 \text{resolve}(e) =
 \begin{cases}
 \{\text{first of } C_{\text{file}}(e)\} & C_{\text{file}}(e) \neq \emptyset \\
 C(e) & 1 \le |C(e)| \le 3 \\
 \{\text{External}(\nu(t))\} & \text{otherwise}
 \end{cases}
-$$
+```
 
 Same-file definitions win because they are the most likely referent; a small ambiguous set is
 linked in full; a large ambiguous set (a very common name) is not guessed and becomes an
@@ -194,36 +198,44 @@ linked in full; a large ambiguous set (a very common name) is not guessed and be
 
 ### 3.2 Dense retrieval
 
-Each `Function` and `Class` node $v$ is embedded as $f(v) \in \mathbb{R}^d$ from the text
-`type name + docstring + first 1500 characters of code`. A query $q$ is embedded with the same
+Each `Function` and `Class` node $`v`$ is embedded as $`f(v) \in \mathbb{R}^d`$ from the text
+`type name + docstring + first 1500 characters of code`. A query $`q`$ is embedded with the same
 model. Embeddings are L2-normalised, so cosine similarity is a dot product:
 
-$$s(q, v) = \cos\big(f(q), f(v)\big) = \frac{f(q) \cdot f(v)}{\lVert f(q) \rVert_2 \, \lVert f(v) \rVert_2} = f(q) \cdot f(v)$$
+```math
+s(q, v) = \cos\big(f(q), f(v)\big) = \frac{f(q) \cdot f(v)}{\lVert f(q) \rVert_2 \, \lVert f(v) \rVert_2} = f(q) \cdot f(v)
+```
 
-The seed set is the top-$K_s$ nodes by cosine similarity ($K_s = 5$ by default), retrieved from
+The seed set is the top-$`K_s`$ nodes by cosine similarity ($`K_s = 5`$ by default), retrieved from
 Qdrant:
 
-$$S_0 = \operatorname*{arg\,top\text{-}K_s}_{v \in V_{\text{code}}} \; s(q, v)$$
+```math
+S_0 = \mathrm{Top}\text{-}K_s\big(\{\, s(q, v) : v \in V_{\text{code}} \,\}\big)
+```
 
 ### 3.3 Topological K-hop expansion
 
-Let $\text{dist}_G(v, u)$ be the length of the shortest path between $v$ and $u$ in the
-**undirected projection** of $G$ (edge direction is ignored by default so that both callees and
+Let $`\text{dist}_G(v, u)`$ be the length of the shortest path between $`v`$ and $`u`$ in the
+**undirected projection** of $`G`$ (edge direction is ignored by default so that both callees and
 callers are reached; a directed mode is available). The expanded set is
 
-$$N_K(S_0) = S_0 \cup \{ u \in V \mid \exists\, v \in S_0 : \text{dist}_G(v, u) \le K \}$$
+```math
+N_K(S_0) = S_0 \cup \{ u \in V \mid \exists\, v \in S_0 : \text{dist}_G(v, u) \le K \}
+```
 
-with $K = 2$ by default. It is computed by breadth-first search in $O(|V| + |E|)$ time bounded by
+with $`K = 2`$ by default. It is computed by breadth-first search in $`O(|V| + |E|)`$ time bounded by
 the explored neighbourhood. The hop distance of each node is kept and reported but does not enter
 the ranking directly. `External` and `File` nodes are traversed but excluded from the final
-candidate set $C = N_K(S_0) \cap V_{\text{code}}$, where
-$V_{\text{code}} = \{\text{Function}, \text{Class}\}$.
+candidate set $`C = N_K(S_0) \cap V_{\text{code}}`$, where
+$`V_{\text{code}} = \{\text{Function}, \text{Class}\}`$.
 
 ### 3.4 Graph centrality
 
 The structural signal is PageRank over the (simple, parallel-edges-merged) directed graph:
 
-$$\pi(v) = \frac{1 - \alpha}{|V|} + \alpha \sum_{u \to v} \frac{\pi(u)}{\text{outdeg}(u)}, \qquad \alpha = 0.85$$
+```math
+\pi(v) = \frac{1 - \alpha}{|V|} + \alpha \sum_{u \to v} \frac{\pi(u)}{\text{outdeg}(u)}, \qquad \alpha = 0.85
+```
 
 PageRank is computed once over the whole graph, so it measures how central a node is in the
 entire repository (functions that many others depend on score highly). Degree centrality is
@@ -231,19 +243,21 @@ available as an alternative signal.
 
 ### 3.5 Reciprocal Rank Fusion
 
-For each candidate $v \in C$ define two 1-based ranks within $C$:
+For each candidate $`v \in C`$ define two 1-based ranks within $`C`$:
 
-- $r_{\text{dense}}(v)$: rank by cosine similarity $s(q, v)$, highest first.
-- $r_{\text{graph}}(v)$: rank by PageRank $\pi(v)$, highest first.
+- $`r_{\text{dense}}(v)`$: rank by cosine similarity $`s(q, v)`$, highest first.
+- $`r_{\text{graph}}(v)`$: rank by PageRank $`\pi(v)`$, highest first.
 
 Ties are broken by node id for determinism. The fused score is
 
-$$\text{RRF}(v) = \frac{1}{k + r_{\text{dense}}(v)} + \frac{1}{k + r_{\text{graph}}(v)}, \qquad k = 60$$
+```math
+\text{RRF}(v) = \frac{1}{k + r_{\text{dense}}(v)} + \frac{1}{k + r_{\text{graph}}(v)}, \qquad k = 60
+```
 
-and the top $M = 20$ candidates by $\text{RRF}(v)$ are returned. RRF uses ranks, not raw scores,
+and the top $`M = 20`$ candidates by $`\text{RRF}(v)`$ are returned. RRF uses ranks, not raw scores,
 so it needs no calibration between cosine similarities and PageRank values, which live on
-different scales. With $k = 60$ the maximum possible score is $2 / 61 \approx 0.0328$, which is why
-the printed scores look small (a top result is typically $0.03$).
+different scales. With $`k = 60`$ the maximum possible score is $`2 / 61 \approx 0.0328`$, which is why
+the printed scores look small (a top result is typically $`0.03`$).
 
 Note that the dense rank is computed over the expanded candidate set (including neighbours that
 were not vector seeds), using their cosine similarity to the query. A neighbour that is
@@ -251,24 +265,33 @@ semantically unrelated therefore gets a poor dense rank and can only rise throug
 
 ### 3.6 Evaluation metrics
 
-For an instance with gold file set $F^*$ (files modified by the gold patch) and the retrieved
-nodes mapped to a ranked list of unique files $f_1, f_2, \dots$ (a file takes the rank of its
+For an instance with gold file set $`F^*`$ (files modified by the gold patch) and the retrieved
+nodes mapped to a ranked list of unique files $`f_1, f_2, \dots`$ (a file takes the rank of its
 best-ranked node):
 
-$$\text{recall@}k = \frac{|F^* \cap \{f_1, \dots, f_k\}|}{|F^*|} \qquad
-\text{hit@}k = \mathbb{1}\big[F^* \cap \{f_1, \dots, f_k\} \neq \emptyset\big]$$
+```math
+\text{recall@}k = \frac{|F^* \cap \{f_1, \dots, f_k\}|}{|F^*|}
+```
 
-$$\text{MRR} = \frac{1}{\min\{ i : f_i \in F^* \}} \quad (0 \text{ if no gold file is retrieved})$$
+```math
+\text{hit@}k = \mathbb{1}\big[F^* \cap \{f_1, \dots, f_k\} \neq \emptyset\big]
+```
 
-$$\text{symbol hit@}10 = \mathbb{1}\big[\text{names(top-10 nodes)} \cap S^* \neq \emptyset\big]$$
+```math
+\text{MRR} = \frac{1}{\min\{ i : f_i \in F^* \}} \quad (0 \text{ if no gold file is retrieved})
+```
 
-where $S^*$ is the set of function and class names taken from the hunk headers of the gold patch.
+```math
+\text{symbol hit@}10 = \mathbb{1}\big[\text{names(top-10 nodes)} \cap S^* \neq \emptyset\big]
+```
+
+where $`S^*`$ is the set of function and class names taken from the hunk headers of the gold patch.
 Reported values are means over instances.
 
 **Paired bootstrap confidence intervals.** For two methods evaluated on the same instances, let
-$d_i = m_i^{\text{GraphRAG}} - m_i^{\text{vector}}$ be the per-instance difference of a metric.
+$`d_i = m_i^{\text{GraphRAG}} - m_i^{\text{vector}}`$ be the per-instance difference of a metric.
 The 95% interval for the mean difference is the 2.5th to 97.5th percentile of
-$\frac{1}{n}\sum_{i} d_{b(i)}$ over $B = 10{,}000$ resamples $b$ drawn with replacement. The
+$`\frac{1}{n}\sum_{i} d_{b(i)}`$ over $`B = 10{,}000`$ resamples $`b`$ drawn with replacement. The
 difference is flagged "CI excludes 0" when that interval does not contain zero. Pairing by
 instance removes between-instance difficulty from the comparison.
 
@@ -322,7 +345,7 @@ re-embed them on every query.
 ### 4.5 Retriever (`retriever.py`)
 
 Implements [3.2 to 3.5](#3-mathematical-foundations): vector seeds, K-hop expansion, dense and
-PageRank ranks, RRF, top-$M$. It also exposes a `retrieve_vector_only` baseline used by the
+PageRank ranks, RRF, top-$`M`$. It also exposes a `retrieve_vector_only` baseline used by the
 evaluation. Each result carries `score`, `dense_score`, `hops` and `rank`.
 
 ### 4.6 Agent (`llm.py`, `sandbox.py`, `orchestrator.py`)
@@ -417,7 +440,7 @@ Raw tables are in [`results/`](results/).
   describe behaviour rather than naming code, and its plugin structure is large.
 - **Small samples.** One instance moves a hit rate by 0.03 to 0.10. These runs predate the
   per-instance output, so no confidence intervals exist for them yet; do not read the
-  differences as statistically established. Instances are the first $N$ in dataset order, not a
+  differences as statistically established. Instances are the first $`N`$ in dataset order, not a
   random sample. The ground truth counts only edited files, so a retrieved file that helps a fix
   without being edited counts as a miss.
 - Full results with bootstrap confidence intervals, more instances and a hops ablation will be
@@ -526,10 +549,10 @@ upper-case field names.
 | `OLLAMA_HOST` | `http://localhost:11434` | Ollama server |
 | `QDRANT_COLLECTION` | `code_nodes` | Collection name |
 | `QDRANT_URL` | unset | Use a Qdrant server instead of embedded mode |
-| `TOP_K_VECTOR` | `5` | Number of dense seeds ($K_s$) |
-| `BFS_MAX_HOPS` | `2` | Expansion depth ($K$) |
-| `RRF_K_CONSTANT` | `60` | RRF constant ($k$) |
-| `MAX_CONTEXT_NODES` | `20` | Nodes returned ($M$) |
+| `TOP_K_VECTOR` | `5` | Number of dense seeds ($`K_s`$) |
+| `BFS_MAX_HOPS` | `2` | Expansion depth ($`K`$) |
+| `RRF_K_CONSTANT` | `60` | RRF constant ($`k`$) |
+| `MAX_CONTEXT_NODES` | `20` | Nodes returned ($`M`$) |
 | `LLM_BACKEND` | `fake` | `fake` or `ollama` |
 | `LLM_MODEL` | `qwen2.5-coder:3b` | Ollama code model |
 | `MAX_REFACTOR_ATTEMPTS` | `3` | Retry limit for the agent loop |
@@ -620,7 +643,7 @@ referee (the specified orchestrator was a stub), resolved cross-file edges, qual
 - The subprocess sandbox is a convenience, not a security boundary. Use the Docker backend
   (`--network none`) for untrusted code.
 - The hash embedder is a lexical fallback for offline use and tests, not for quality results.
-- Current results use small, first-$N$ samples; the agent loop has not been benchmarked on
+- Current results use small, first-$`N`$ samples; the agent loop has not been benchmarked on
   SWE-bench task resolution, only on retrieval.
 
 **Future work**
