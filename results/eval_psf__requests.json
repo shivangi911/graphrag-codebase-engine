@@ -1,0 +1,1032 @@
+{
+ "repo": "psf/requests",
+ "embedder": "sbert-BAAI/bge-small-en-v1.5",
+ "ks": [
+  1,
+  3,
+  5,
+  10
+ ],
+ "per_instance": [
+  {
+   "instance_id": "psf__requests-1142",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1142",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.16666666666666666,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1327",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1327",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1339",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.5,
+    "hit@1": 1.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1339",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 0.2,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1376",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1376",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1537",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1537",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1635",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.6666666666666666,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1635",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.3333333333333333,
+    "hit@1": 1.0,
+    "recall@3": 0.6666666666666666,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1657",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1657",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1689",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1689",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1713",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.5,
+    "hit@1": 1.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1713",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.5,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1724",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.16666666666666666,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1724",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1733",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.2,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1733",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1766",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1766",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1768",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1768",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1776",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.3333333333333333,
+    "hit@3": 1.0,
+    "recall@5": 0.3333333333333333,
+    "hit@5": 1.0,
+    "recall@10": 0.3333333333333333,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1776",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.3333333333333333,
+    "hit@1": 1.0,
+    "recall@3": 0.6666666666666666,
+    "hit@3": 1.0,
+    "recall@5": 0.6666666666666666,
+    "hit@5": 1.0,
+    "recall@10": 0.6666666666666666,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1888",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1888",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1921",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1921",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1944",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.5,
+    "hit@1": 1.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1944",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.5,
+    "hit@1": 1.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1962",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.125,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1962",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.1,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1963",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-1963",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2148",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2148",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.2,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2153",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2153",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2193",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2193",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2317",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.1111111111111111,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2317",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2393",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2393",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.125,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2413",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 0.2,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2413",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2466",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2466",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.14285714285714285,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2617",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.5,
+    "hit@1": 1.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2617",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.5,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2674",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2674",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2678",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0625,
+    "hit@3": 1.0,
+    "recall@5": 0.1875,
+    "hit@5": 1.0,
+    "recall@10": 0.25,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2678",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0625,
+    "hit@3": 1.0,
+    "recall@5": 0.125,
+    "hit@5": 1.0,
+    "recall@10": 0.125,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2754",
+   "repo": "psf/requests",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 0.2,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "psf__requests-2754",
+   "repo": "psf/requests",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  }
+ ]
+}

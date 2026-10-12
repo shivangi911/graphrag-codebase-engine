@@ -41,22 +41,25 @@ explicitly and uses them at retrieval time.
 
 ## 1. Headline results
 
-Retrieval benchmark on **51 SWE-bench instances** (psf/requests: 30, pallets/flask: 11,
-pytest-dev/pytest: 10). The issue text is the query; the ground truth is the set of files edited
+Retrieval benchmark on **81 SWE-bench instances** (psf/requests: 30, pallets/flask: 11,
+pytest-dev/pytest: 40). The issue text is the query; the ground truth is the set of files edited
 by the gold patch. Both methods return 20 nodes. Embedder: `BAAI/bge-small-en-v1.5` (CPU).
+Intervals are 95% paired bootstrap CIs over instances.
 
-| Metric | Vector-only | GraphRAG (BFS + RRF) | Change |
-|---|---|---|---|
-| MRR | 0.463 | **0.586** | +0.12 |
-| hit@1 | 0.294 | **0.451** | +0.16 |
-| hit@10 | 0.804 | **0.882** | +0.08 |
-| recall@10 | 0.731 | 0.806 | +0.07 |
-| symbol hit@10 | 0.275 | **0.392** | +0.12 |
+| Metric | Vector-only | GraphRAG (BFS + RRF) | Difference | 95% CI |
+|---|---|---|---|---|
+| MRR | 0.382 | 0.452 | +0.070 | [-0.010, +0.150] |
+| hit@1 | 0.235 | 0.321 | +0.086 | [-0.025, +0.198] |
+| symbol hit@10 | 0.198 | 0.272 | +0.074 | [-0.012, +0.160] |
+| hit@10 | 0.704 | 0.728 | +0.025 | [-0.062, +0.111] |
+| recall@10 | 0.645 | 0.674 | +0.029 | [-0.058, +0.118] |
 
-The gain is concentrated at the top of the ranking (the correct file is ranked first more often)
-and in locating the right function. Mid-depth recall is roughly unchanged and was slightly worse on
-flask. These are preliminary: the sample is small and no confidence intervals have been computed
-for these runs yet. See [Results](#6-results) for the per-repo tables and caveats.
+**Reading this honestly:** GraphRAG is ahead in the point estimates, mostly at the top of the
+ranking (the right file first, the right function found), but **no metric's interval excludes
+zero**, so the improvement is directional, not statistically established at this sample size. The
+effect is concentrated in the smaller library-style repositories (requests, flask) and is absent
+on pytest (40 instances: MRR 0.277 vs 0.288). See [Results](#6-results) for the per-repository
+breakdown and discussion.
 
 ---
 
@@ -386,7 +389,9 @@ results can be pooled and bootstrapped.
 ## 6. Results
 
 Embedder `BAAI/bge-small-en-v1.5`, `top_k_vector = 5`, `bfs_max_hops = 2`, `rrf_k = 60`,
-20 nodes returned.
+20 nodes returned. Runs are deterministic: re-running a command reproduces the tables below.
+Raw tables and per-instance JSON are in [`results/`](results/), pooled summary in
+[`results/summary.md`](results/summary.md).
 
 ### 6.1 Per repository
 
@@ -397,6 +402,8 @@ Embedder `BAAI/bge-small-en-v1.5`, `top_k_vector = 5`, `bfs_max_hops = 2`, `rrf_
 | vector-only | 0.267 | 0.502 | 0.634 | 0.753 | 0.333 | 0.633 | 0.767 | 0.867 | 0.503 | 0.333 |
 | graphrag | 0.372 | 0.530 | 0.693 | 0.826 | 0.467 | 0.633 | 0.800 | 0.933 | 0.606 | 0.467 |
 
+MRR difference +0.103, 95% CI [-0.034, +0.237].
+
 **pallets/flask** (11 instances, which is all of flask in SWE-bench)
 
 | method | recall@1 | recall@3 | recall@5 | recall@10 | hit@1 | hit@3 | hit@5 | hit@10 | MRR | symbol hit@10 |
@@ -404,47 +411,75 @@ Embedder `BAAI/bge-small-en-v1.5`, `top_k_vector = 5`, `bfs_max_hops = 2`, `rrf_
 | vector-only | 0.212 | 0.439 | 0.652 | 0.788 | 0.273 | 0.545 | 0.727 | 0.818 | 0.435 | 0.273 |
 | graphrag | 0.356 | 0.523 | 0.553 | 0.848 | 0.545 | 0.636 | 0.636 | 0.909 | 0.630 | 0.455 |
 
-**pytest-dev/pytest** (10 instances)
+MRR difference +0.196, 95% CI [-0.105, +0.482].
+
+**pytest-dev/pytest** (40 instances)
 
 | method | recall@1 | recall@3 | recall@5 | recall@10 | hit@1 | hit@3 | hit@5 | hit@10 | MRR | symbol hit@10 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| vector-only | 0.200 | 0.600 | 0.600 | 0.600 | 0.200 | 0.600 | 0.600 | 0.600 | 0.374 | 0.100 |
-| graphrag | 0.300 | 0.600 | 0.700 | 0.700 | 0.300 | 0.600 | 0.700 | 0.700 | 0.475 | 0.100 |
+| vector-only | 0.138 | 0.338 | 0.463 | 0.525 | 0.150 | 0.350 | 0.475 | 0.550 | 0.277 | 0.075 |
+| graphrag | 0.150 | 0.388 | 0.463 | 0.512 | 0.150 | 0.400 | 0.475 | 0.525 | 0.288 | 0.075 |
 
-Raw tables are in [`results/`](results/).
+MRR difference +0.011, 95% CI [-0.082, +0.102].
 
-### 6.2 Pooled (51 instances, weighted by instance count)
+### 6.2 Pooled (81 instances)
 
-| metric | vector-only | graphrag |
-|---|---|---|
-| recall@1 | 0.242 | 0.355 |
-| recall@3 | 0.508 | 0.542 |
-| recall@5 | 0.631 | 0.664 |
-| recall@10 | 0.731 | 0.806 |
-| hit@1 | 0.294 | 0.451 |
-| hit@3 | 0.608 | 0.627 |
-| hit@5 | 0.725 | 0.745 |
-| hit@10 | 0.804 | 0.882 |
-| MRR | 0.463 | 0.586 |
-| symbol hit@10 | 0.275 | 0.392 |
+Mean (95% bootstrap CI):
+
+| method | hit@1 | hit@3 | hit@5 | hit@10 | recall@1 | recall@10 | MRR | symbol hit@10 |
+|---|---|---|---|---|---|---|---|---|
+| vector-only | 0.235 (0.15-0.33) | 0.481 (0.37-0.59) | 0.617 (0.51-0.72) | 0.704 (0.60-0.80) | 0.195 (0.12-0.28) | 0.645 (0.55-0.74) | 0.382 (0.30-0.47) | 0.198 (0.11-0.28) |
+| graphrag | 0.321 (0.22-0.42) | 0.519 (0.41-0.63) | 0.617 (0.51-0.73) | 0.728 (0.63-0.83) | 0.260 (0.17-0.35) | 0.674 (0.58-0.77) | 0.452 (0.36-0.54) | 0.272 (0.17-0.37) |
+
+Paired difference (GraphRAG minus vector-only), n = 81:
+
+| metric | baseline | graphrag | delta | 95% CI | CI excludes 0 |
+|---|---|---|---|---|---|
+| hit@1 | 0.235 | 0.321 | +0.086 | [-0.025, +0.198] | no |
+| hit@3 | 0.481 | 0.519 | +0.037 | [-0.074, +0.148] | no |
+| hit@5 | 0.617 | 0.617 | +0.000 | [-0.099, +0.099] | no |
+| hit@10 | 0.704 | 0.728 | +0.025 | [-0.062, +0.111] | no |
+| recall@1 | 0.195 | 0.260 | +0.065 | [-0.029, +0.162] | no |
+| recall@10 | 0.645 | 0.674 | +0.029 | [-0.058, +0.118] | no |
+| MRR | 0.382 | 0.452 | +0.070 | [-0.010, +0.150] | no |
+| symbol hit@10 | 0.198 | 0.272 | +0.074 | [-0.012, +0.160] | no |
 
 ### 6.3 Interpretation and caveats
 
-- **Consistent:** MRR is higher with graph retrieval on all three repositories (+0.10, +0.19,
-  +0.10), as is the top-1 hit rate. The right file is ranked first noticeably more often.
-- **Function-level:** symbol hit@10 improves on requests and flask (tie on pytest at 0.10).
-- **Not consistent:** at mid depth (recall@5, hit@5) GraphRAG was worse on flask
-  (0.553 vs 0.652 and 0.636 vs 0.727), most likely because graph neighbours of a strong seed
-  displace a second gold file at ranks 4 to 10.
-- **pytest is hard for both methods** (hit@10 of 0.6 and 0.7, symbol hit 0.10): its issues often
-  describe behaviour rather than naming code, and its plugin structure is large.
-- **Small samples.** One instance moves a hit rate by 0.03 to 0.10. These runs predate the
-  per-instance output, so no confidence intervals exist for them yet; do not read the
-  differences as statistically established. Instances are the first $`N`$ in dataset order, not a
-  random sample. The ground truth counts only edited files, so a retrieved file that helps a fix
-  without being edited counts as a miss.
-- Full results with bootstrap confidence intervals, more instances and a hops ablation will be
-  added with `graphrag report` (see [Usage](#8-usage)).
+- **Direction is consistent, significance is not.** Every pooled point estimate favours GraphRAG
+  or ties, and the largest gains are at the top of the ranking (MRR, hit@1, symbol hit). But all
+  intervals include zero; MRR (+0.070) and symbol hit (+0.074) come closest. At this sample size
+  the data neither establish nor rule out a modest improvement.
+- **The effect depends on the repository.** On requests and flask the point estimates show a
+  clear lift (MRR +0.10 and +0.20), though each repository's interval also includes zero. On
+  pytest, with 40 instances, there is no difference at all (MRR 0.277 vs 0.288). An earlier
+  10-instance pytest run looked positive (+0.10 MRR); at 40 instances that disappeared, which is
+  a reminder of how noisy small samples are.
+- **Why pytest may differ (hypotheses, not tested).** Symbol hit is only 0.075 for both methods,
+  so dense retrieval rarely seeds the right function, and graph expansion can only help when a
+  seed is near the gold code. pytest's plugin and hook-based dispatch is invisible to a static,
+  name-based call graph, its issue text often describes behaviour rather than naming code, and
+  the larger graph has more hub nodes that may crowd out relevant ones through the PageRank half
+  of the fusion.
+- **Mid-depth recall is unchanged** (hit@5 0.617 for both) and was worse on flask
+  (hit@5 0.636 vs 0.727), consistent with graph neighbours displacing a second gold file at
+  ranks 4 to 10.
+- **Methodology caveats.** Instances are the first $`N`$ in dataset order, not a random sample.
+  Ground truth counts only edited files, so a retrieved file that helps a fix without being edited
+  counts as a miss. Metrics are file-level except symbol hit, which is a name match against hunk
+  headers.
+- **Next experiments:** hops ablation (`BFS_MAX_HOPS=1`), more seeds (`TOP_K_VECTOR=10`), a
+  weighted instead of equal-weight fusion, and a stronger embedding model, each evaluated with the
+  same paired bootstrap.
+
+Reproduce:
+
+```bash
+graphrag eval --repo psf/requests --limit 30 --embedder sbert
+graphrag eval --repo pallets/flask --limit 30 --embedder sbert
+graphrag eval --repo pytest-dev/pytest --limit 40 --embedder sbert --output results/eval_pytest_n40.md
+graphrag report results/eval_psf__requests.json results/eval_pallets__flask.json results/eval_pytest_n40.json
+```
 
 ---
 
@@ -643,7 +678,7 @@ referee (the specified orchestrator was a stub), resolved cross-file edges, qual
 - The subprocess sandbox is a convenience, not a security boundary. Use the Docker backend
   (`--network none`) for untrusted code.
 - The hash embedder is a lexical fallback for offline use and tests, not for quality results.
-- Current results use small, first-$`N`$ samples; the agent loop has not been benchmarked on
+- Current results use first-$`N`$ samples (81 instances) with intervals that include zero; the agent loop has not been benchmarked on
   SWE-bench task resolution, only on retrieval.
 
 **Future work**

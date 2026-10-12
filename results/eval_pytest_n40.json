@@ -1,0 +1,1372 @@
+{
+ "repo": "pytest-dev/pytest",
+ "embedder": "sbert-BAAI/bge-small-en-v1.5",
+ "ks": [
+  1,
+  3,
+  5,
+  10
+ ],
+ "per_instance": [
+  {
+   "instance_id": "pytest-dev__pytest-10051",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10051",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10081",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10081",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10115",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10115",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10343",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10343",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10356",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10356",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10371",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10371",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10442",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10442",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10482",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10482",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10552",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.07692307692307693,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10552",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10624",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10624",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10758",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10758",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10893",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.5,
+    "hit@1": 1.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10893",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.5,
+    "hit@3": 1.0,
+    "recall@5": 0.5,
+    "hit@5": 1.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10988",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.08333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10988",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.14285714285714285,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11041",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11041",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11044",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11044",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11047",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11047",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.16666666666666666,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11125",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.16666666666666666,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11125",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11143",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.2,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11143",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11148",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11148",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.2,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11160",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11160",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11178",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11178",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11217",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.1,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-11217",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5103",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.2,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5103",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5205",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5205",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5221",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 1.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5221",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5227",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5227",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5254",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.5,
+    "hit@10": 1.0,
+    "mrr": 0.16666666666666666,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5254",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5262",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5262",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5281",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5281",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5356",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5356",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5404",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5404",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5413",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5413",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.3333333333333333,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5479",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5479",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5495",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5495",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5550",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.25,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5550",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5555",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5555",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5559",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5559",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5631",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5631",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5692",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 1.0,
+    "hit@1": 1.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 1.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5692",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 1.0,
+    "hit@3": 1.0,
+    "recall@5": 1.0,
+    "hit@5": 1.0,
+    "recall@10": 1.0,
+    "hit@10": 1.0,
+    "mrr": 0.5,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5787",
+   "repo": "pytest-dev/pytest",
+   "method": "vector-only",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5787",
+   "repo": "pytest-dev/pytest",
+   "method": "graphrag (BFS+RRF)",
+   "metrics": {
+    "recall@1": 0.0,
+    "hit@1": 0.0,
+    "recall@3": 0.0,
+    "hit@3": 0.0,
+    "recall@5": 0.0,
+    "hit@5": 0.0,
+    "recall@10": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "symbol_hit@10": 0.0
+   }
+  }
+ ]
+}
